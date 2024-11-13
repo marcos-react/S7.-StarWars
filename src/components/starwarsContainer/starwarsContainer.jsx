@@ -1,34 +1,31 @@
+// StarwarsContainer.jsx
 import React, { useContext } from "react";
+import { useNavigate } from "react-router-dom";
 import StarwarsContext from "../../context/StarwarsContext";
+import Header from "../header/header";
 
-function StarwarsContainer({ logo }) {
-  const { starships, loading } = useContext(StarwarsContext);
+function StarwarsContainer() {
+  const { starships, loading, getId } = useContext(StarwarsContext);
+  const navigate = useNavigate();
+
+  const handleCardClick = (url) => {
+   const id = getId(url);
+    navigate(`/starships/${id}`);
+  };
 
   return (
     <div className="bg-black">
-      <header>
-        <div className="flex justify-center items-center py-4">
-          <h1 className="text-center">
-            <img src={logo} className="h-32 mx-auto" alt="Star Wars Logo" />
-          </h1>
-          <p className="text-white px-5 absolute right-4">
-            LOG IN // SIGN UP
-          </p>
-        </div>
-        <nav className="flex justify-center border-y-2 border-neutral-100">
-          <ul className="menu menu-horizontal text-white gap-4">
-            <li> HOME </li>
-            <li> STARSHIPS </li>
-          </ul>
-        </nav>
-      </header>
+      <Header />
       {loading ? (
         <p>Loading starships...</p>
       ) : (
         <ul className="flex flex-col justify-center">
           {starships.map((ship) => (
             <li key={ship.name}>
-              <div className="card bg-gray-900 mb-4 mx-11 my-4">
+              <div
+                className="card bg-gray-900 mb-4 mx-11 my-4 cursor-pointer"
+                onClick={() => handleCardClick(ship.url)}
+              >
                 <div className="card-body">
                   <h2 className="card-title text-white">
                     <strong>Name:</strong> {ship.name} <br />
@@ -47,3 +44,5 @@ function StarwarsContainer({ logo }) {
 }
 
 export default StarwarsContainer;
+
+
