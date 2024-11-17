@@ -1,7 +1,18 @@
 import React from "react";
 import logo from "../../assets/star-wars.svg";
+import { useNavigate } from "react-router-dom";
 
 function Header() {
+  const navigate = useNavigate();
+
+  const handleWelcome = () => {
+    navigate("/");
+  };
+
+  const handleStarships = () => {
+    navigate("/starships");
+  };
+
   return (
     <header>
       <div className="flex justify-center items-center py-4">
@@ -12,8 +23,16 @@ function Header() {
       </div>
       <nav className="flex justify-center border-y-2 border-neutral-100">
         <ul className="menu menu-horizontal text-white gap-4">
-          <li> HOME </li>
-          <li> STARSHIPS </li>
+          <li>
+            <button onClick={handleWelcome} className="hover:underline">
+              HOME
+            </button>
+          </li>
+          <li>
+            <button onClick={handleStarships} className="hover:underline">
+              STARSHIPS
+            </button>
+          </li>
         </ul>
       </nav>
     </header>

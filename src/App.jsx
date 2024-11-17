@@ -5,6 +5,8 @@ import starwars from "./assets/star-wars.svg";
 import StarwarsContainer from "./components/starwarsContainer/starwarsContainer";
 import StarshipDetail from "./components/starshipDetail/starshipDetail";
 import { StarwarsProvider } from "./context/StarwarsContext";
+import WelcomePage from "./pages/WelcomePage";
+import StarshipsPage from "./pages/StarshipsPage";
 import "./App.css";
 
 function App() {
@@ -13,7 +15,10 @@ function App() {
         <Router>
           <Routes>
             {/* Route Starship */}
-            <Route path="/" element={<StarwarsContainer logo={starwars} />} />
+           { /* <Route path="/" element={<StarwarsContainer logo={starwars} />} /> */ }
+
+            <Route path="/" element={<WelcomePage />} />
+            <Route path="/starships" element={<StarshipsPage />} />
 
             {/* Route starship detail */}
             <Route path="/starships/:id" element={<StarshipDetail />} />
