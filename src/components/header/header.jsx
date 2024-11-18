@@ -1,9 +1,11 @@
-import React from "react";
+import React, { useContext } from "react";
 import logo from "../../assets/star-wars.svg";
 import { useNavigate } from "react-router-dom";
+import { AuthContext } from "../../context/AuthContext.jsx";
 
 function Header() {
   const navigate = useNavigate();
+  const { user, logout } = useContext(AuthContext);
 
   const handleWelcome = () => {
     navigate("/");
@@ -13,13 +15,42 @@ function Header() {
     navigate("/starships");
   };
 
+  const handleLogin = () => {
+    navigate("/login");
+  };
+
+  const handleRegister = () => {
+    navigate("/register");
+  };
+
+  const handleLogout = async () => {
+    await logout();
+    navigate("/");
+  };
+
   return (
     <header>
       <div className="flex justify-center items-center py-4">
         <h1 className="text-center">
           <img src={logo} className="h-32 mx-auto" alt="Star Wars Logo" />
         </h1>
-        <p className="text-white px-5 absolute right-4">LOG IN // SIGN UP</p>
+        <p className="text-white px-5 absolute right-4">
+          {user ? (
+            <button onClick={handleLogout} className="hover:underline">
+              LOG OUT
+            </button>
+          ) : (
+            <>
+              <button onClick={handleLogin} className="hover:underline">
+                LOG IN
+              </button>
+              {" // "}
+              <button onClick={handleRegister} className="hover:underline">
+                SIGN UP
+              </button>
+            </>
+          )}
+        </p>
       </div>
       <nav className="flex justify-center border-y-2 border-neutral-100">
         <ul className="menu menu-horizontal text-white gap-4">
@@ -40,3 +71,4 @@ function Header() {
 }
 
 export default Header;
+

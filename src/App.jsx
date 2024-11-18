@@ -7,6 +7,8 @@ import StarshipDetail from "./components/starshipDetail/starshipDetail";
 import { StarwarsProvider } from "./context/StarwarsContext";
 import WelcomePage from "./pages/WelcomePage";
 import StarshipsPage from "./pages/StarshipsPage";
+import LoginFormPage from "./pages/LoginFormPage";
+import RegisterFormPage from "./pages/RegisterFormPage";
 import "./App.css";
 
 function App() {
@@ -22,6 +24,12 @@ function App() {
 
             {/* Route starship detail */}
             <Route path="/starships/:id" element={<StarshipDetail />} />
+            {/* Route login */}
+            <Route path="/login" element={<LoginFormPage />} />
+            {/* Route register */}
+            <Route path="/register" element={<RegisterFormPage />} />
+
+
           </Routes>
         </Router>
     </StarwarsProvider>
