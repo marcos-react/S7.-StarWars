@@ -1,4 +1,3 @@
-// src/context/AuthContext.js
 import React, { createContext, useState, useEffect } from "react";
 import { onAuthStateChanged, signOut } from "firebase/auth";
 import { auth } from "../../firebaseConfig";
@@ -13,7 +12,7 @@ export const AuthProvider = ({ children }) => {
       setUser(currentUser);
     });
 
-    return () => unsubscribe(); // Cleanup subscription on unmount
+    return () => unsubscribe(); 
   }, []);
 
   const logout = async () => {

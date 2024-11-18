@@ -16,9 +16,7 @@ function StarwarsContainer() {
   return (
     <div className="bg-black">
       <Header />
-      {loading ? (
-        <p>Loading starships...</p>
-      ) : (
+     
         <>
           <ul className="flex flex-col justify-center">
             {starships.map((ship) => (
@@ -48,7 +46,7 @@ function StarwarsContainer() {
             </button>
           </div>
         </>
-      )}
+      
     </div>
   );
 }

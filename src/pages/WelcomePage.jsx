@@ -12,43 +12,12 @@ function WelcomePage() {
   return (
     <div className="bg-black">
       <Header />
-      <h1 className="text-4xl font-bold mb-6 text-white mt-4">Benvingut/da!</h1>
-      <p className="text-lg mb-8 text-white">
-        Lorem ipsum dolor sit amet consectetur, adipisicing elit. Corporis,
-        natus nostrum. Nesciunt tempora blanditiis quas ipsam deserunt tenetur
-        exercitationem voluptates quasi, quidem praesentium esse sed. Impedit
-        nobis voluptate maiores officiis ipsum corrupti dolor, quibusdam, est
-        iusto voluptates vitae fugit ex. Inventore vero, distinctio, architecto
-        minima quos maxime laboriosam qui sequi maiores beatae debitis quis ipsa
-        non sed, odio quibusdam molestias delectus adipisci minus reprehenderit?
-        Voluptas nihil illum, aliquid sit tenetur consequatur reprehenderit
-        corrupti quos, minus officia quas, sequi maiores distinctio? Rerum
-        itaque cumque, eum quisquam consectetur explicabo ut optio, numquam
-        aspernatur asperiores tenetur qui quas minus est et iure aperiam! Vero
-        dolor aliquid quo perspiciatis. Quas vel in velit iste illo soluta iure,
-        consequatur consequuntur. Enim, tenetur in totam provident ullam
-        eligendi aperiam earum commodi quam laborum cumque pariatur, nemo,
-        veritatis amet nostrum nesciunt minus accusantium nisi! Tenetur ipsa
-        maiores amet neque, nihil libero inventore, dolor omnis vero fugiat quae
-        assumenda possimus cumque tempore facere. Iusto ipsam, vitae
-        reprehenderit mollitia maxime ipsum deleniti amet aspernatur! Animi
-        expedita atque labore harum rerum perspiciatis aperiam aspernatur ut
-        recusandae adipisci iure neque facilis soluta corporis nam error
-        eligendi modi ipsam ducimus incidunt aliquam, nemo voluptatem?
-        Recusandae reprehenderit placeat praesentium tenetur impedit. Corrupti
-        molestias exercitationem maiores. Repellendus aliquam non sint suscipit
-        praesentium cupiditate aspernatur, reprehenderit et architecto eligendi
-        provident consequatur earum. Unde sequi dolor laudantium nihil cum
-        doloribus. Laudantium provident omnis ad soluta quasi quos maxime ab
-        repellendus laborum doloribus, expedita cumque magnam cupiditate
-        accusantium eius earum sapiente atque nam, voluptate libero consequuntur
-        recusandae. Deleniti illo illum deserunt consequuntur reiciendis minima
-        mollitia distinctio sunt voluptatibus labore, cum impedit quaerat
-        tempora laborum asperiores aliquid officiis ullam cumque? Molestias
-        architecto necessitatibus harum quam quo praesentium cumque animi eius
-        blanditiis, maxime facilis, earum cum molestiae soluta optio sint.
-        Libero vitae corrupti rerum placeat quaerat? Consequuntur, minus fugit!
-      </p>
+      <div className="mx-10"> {/* Margin left and right */}
+        <h1 className="text-4xl font-bold mb-6 text-white mt-4">Benvingut/da!</h1>
+        <p className="text-lg mb-8 text-white">
+          Lorem ipsum dolor sit, amet consectetur adipisicing elit. Et dolorem enim nemo a ea tempore, molestiae facere, asperiores aut maxime molestias quaerat dolorum mollitia perferendis quam magni iusto pariatur earum delectus voluptas quae quos! Non numquam officiis modi nesciunt eveniet debitis praesentium tempora cumque quo laborum accusantium beatae, repudiandae voluptatem, id, doloribus error corrupti cum? Cum sapiente vitae necessitatibus. Odio maxime, molestias perspiciatis aspernatur nemo velit porro recusandae cum enim earum ex necessitatibus nam neque beatae dolorum quam. Architecto, consectetur dolore quaerat, asperiores cum necessitatibus repellat quas reprehenderit totam animi, provident voluptas nemo corrupti nihil assumenda quis ipsam ratione laborum distinctio itaque! Perferendis eius mollitia facilis expedita, reprehenderit est aliquid porro adipisci beatae voluptatum sequi impedit recusandae temporibus? Vitae blanditiis dignissimos unde vero aut magni? Aperiam excepturi obcaecati expedita molestias deleniti earum distinctio consectetur inventore in, dolores enim officiis officia autem repudiandae. Natus suscipit error inventore, dolor et praesentium cumque optio tempore in adipisci magnam perspiciatis ut aspernatur ipsum molestias, neque voluptate necessitatibus? Exercitationem nisi culpa amet veritatis excepturi quis quas et. Labore, eaque quae ab voluptate exercitationem magni placeat nesciunt minima explicabo fugiat aliquam voluptatum. Eos deleniti facilis exercitationem unde consectetur ipsa blanditiis obcaecati quae modi. Aspernatur deserunt nobis perferendis cum repellat vero? Hic recusandae ad iusto quasi commodi suscipit velit eligendi optio possimus, qui placeat numquam amet sapiente architecto culpa, dolore ipsa cumque quisquam. Illo totam nam, voluptatem itaque voluptas magni assumenda voluptatum incidunt dolorem aliquid unde iste quibusdam nemo quisquam nihil esse labore eos reprehenderit consequatur eius amet tempore! Accusantium, dolorum! Quas impedit porro culpa voluptatum deserunt omnis non nulla odio. Dolorum cumque ad ipsa ullam incidunt culpa labore mollitia numquam dolores. Esse itaque officiis expedita! Rem perspiciatis non, eos nihil sunt suscipit. Consequatur enim id quam beatae molestias. Doloribus reiciendis hic voluptatibus, eum aperiam incidunt aliquid.
+        </p>
+      </div>
       <div className="flex justify-center mt-4">
         <button
           onClick={handleStarships}
@@ -62,3 +31,4 @@ function WelcomePage() {
 }
 
 export default WelcomePage;
+

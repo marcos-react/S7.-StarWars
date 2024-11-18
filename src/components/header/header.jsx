@@ -2,6 +2,10 @@ import React, { useContext } from "react";
 import logo from "../../assets/star-wars.svg";
 import { useNavigate } from "react-router-dom";
 import { AuthContext } from "../../context/AuthContext.jsx";
+import { FaFacebook } from "react-icons/fa";
+import { FaInstagram } from "react-icons/fa";
+import { TfiTwitter } from "react-icons/tfi";
+import { CiYoutube } from "react-icons/ci";
 
 function Header() {
   const navigate = useNavigate();
@@ -31,6 +35,12 @@ function Header() {
   return (
     <header>
       <div className="flex justify-center items-center py-4">
+        {/*
+      <FaFacebook />
+      <FaInstagram />
+      <TfiTwitter />
+      <CiYoutube />
+      */}
         <h1 className="text-center">
           <img src={logo} className="h-32 mx-auto" alt="Star Wars Logo" />
         </h1>
